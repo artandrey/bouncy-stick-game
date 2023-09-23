@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 1
+  thrust: 8
   rb: {fileID: 2502424100642625146}
 --- !u!1 &7842054409552066192
 GameObject:
@@ -336,5 +336,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 1
+  thrust: 8
   rb: {fileID: 2502424100642625146}
