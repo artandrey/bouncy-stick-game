@@ -6,7 +6,9 @@ public class jump : MonoBehaviour
 {
     // Start is called before the first frame update
     public float thrust = 8.0f;
+    public float angle = 0f;
     public Rigidbody2D rb;
+
 
     void Start()
     {
@@ -18,16 +20,10 @@ public class jump : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        string name = this.name;
+        float radiansAngleIncludingRotation = (rb.transform.rotation.eulerAngles.z + angle) * Mathf.Deg2Rad;
 
-        if (name == "collider-top")
-        {
-            rb.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(Mathf.Cos(radiansAngleIncludingRotation) * thrust,
+        Mathf.Sin(radiansAngleIncludingRotation) * thrust), ForceMode2D.Impulse);
 
-        }
-        else if (name == "collider-bottom")
-        {
-            rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
-        }
     }
 }
