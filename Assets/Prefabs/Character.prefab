@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 81955092366486158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0, z: 0}
-  m_LocalScale: {x: 0.22, y: 1, z: 1}
+  m_LocalPosition: {x: -0.42, y: 0, z: 0}
+  m_LocalScale: {x: 0.22, y: 0.98, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8471841900013287078}
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 5
+  thrust: 3
   angle: 0
   rb: {fileID: 2502424100642625146}
 --- !u!1 &640088229552043922
@@ -122,8 +122,8 @@ Transform:
   m_GameObject: {fileID: 640088229552043922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9585667, y: -0.00651, z: 0}
-  m_LocalScale: {x: 0.5261034, y: 4.051227, z: 1}
+  m_LocalPosition: {x: -5.0346, y: 0.58896, z: 0}
+  m_LocalScale: {x: 0.37405953, y: 2.860087, z: 0.711}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1295891706139528647}
@@ -296,8 +296,8 @@ Transform:
   m_GameObject: {fileID: 3434748457666560759}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0, z: 0}
-  m_LocalScale: {x: 0.22, y: 1, z: 1}
+  m_LocalPosition: {x: 0.42, y: 0, z: 0}
+  m_LocalScale: {x: 0.22, y: 0.98, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8471841900013287078}
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 5
+  thrust: 3
   angle: 180
   rb: {fileID: 2502424100642625146}
 --- !u!1 &7478706670474728831
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 10
+  thrust: 8
   angle: 90
   rb: {fileID: 2502424100642625146}
 --- !u!1 &7842054409552066192
@@ -525,6 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 10
+  thrust: 8
   angle: 270
   rb: {fileID: 2502424100642625146}
