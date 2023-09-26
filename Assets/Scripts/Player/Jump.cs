@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jump : MonoBehaviour
+public class Jump : MonoBehaviour
 {
     // Start is called before the first frame update
     public float thrust = 8.0f;
