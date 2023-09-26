@@ -25,7 +25,7 @@ public class jump : MonoBehaviour
     {
         float radiansAngleIncludingRotation = (rb.transform.rotation.eulerAngles.z + angle) * Mathf.Deg2Rad;
 
-        float boostXQ = boostX + 1;
+        float boostXQ = boostX + 2;
 
         rb.AddForce(new Vector2(Mathf.Cos(radiansAngleIncludingRotation) * thrust * boostX,
         Mathf.Sin(radiansAngleIncludingRotation) * thrust), ForceMode2D.Impulse);
