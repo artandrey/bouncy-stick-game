@@ -172,9 +172,9 @@ TextureImporter:
         rgba: 4294901760
     - name: bone_6
       guid: fbf3a2ca8e6cc0e47833482910e684b4
-      position: {x: 82.11723, y: 26.919024, z: 0}
-      rotation: {x: 0, y: 0, z: 0.70278233, w: 0.71140504}
-      length: 14.156735
+      position: {x: 81.42673, y: 10.519147, z: 0}
+      rotation: {x: 0, y: 0, z: 0.69478524, w: 0.71921736}
+      length: 21.073475
       parentId: -1
       color:
         serializedVersion: 2
@@ -301,8 +301,8 @@ TextureImporter:
       boneIndex[1]: 0
       boneIndex[2]: 0
       boneIndex[3]: 0
-    - weight[0]: 0.68433017
-      weight[1]: 0.31566986
+    - weight[0]: 0.68433046
+      weight[1]: 0.3156695
       weight[2]: 0
       weight[3]: 0
       boneIndex[0]: 3
@@ -325,29 +325,29 @@ TextureImporter:
       boneIndex[1]: 0
       boneIndex[2]: 0
       boneIndex[3]: 0
-    - weight[0]: 0.783354
-      weight[1]: 0.21664605
+    - weight[0]: 0.783251
+      weight[1]: 0.21674904
       weight[2]: 0
       weight[3]: 0
       boneIndex[0]: 0
       boneIndex[1]: 2
       boneIndex[2]: 0
       boneIndex[3]: 0
-    - weight[0]: 0.80851424
-      weight[1]: 0.19148572
+    - weight[0]: 0.83970636
+      weight[1]: 0.1602937
       weight[2]: 0
       weight[3]: 0
       boneIndex[0]: 0
       boneIndex[1]: 5
       boneIndex[2]: 0
       boneIndex[3]: 0
-    - weight[0]: 0.6605078
-      weight[1]: 0.3394922
-      weight[2]: 0
+    - weight[0]: 0.44613662
+      weight[1]: 0.4433399
+      weight[2]: 0.110523455
       weight[3]: 0
       boneIndex[0]: 0
       boneIndex[1]: 1
-      boneIndex[2]: 0
+      boneIndex[2]: 5
       boneIndex[3]: 0
     - weight[0]: 1
       weight[1]: 0
@@ -421,23 +421,23 @@ TextureImporter:
       boneIndex[1]: 0
       boneIndex[2]: 0
       boneIndex[3]: 0
-    - weight[0]: 0.7404641
-      weight[1]: 0.25953588
-      weight[2]: 0
+    - weight[0]: 0.62642
+      weight[1]: 0.21939176
+      weight[2]: 0.15418822
       weight[3]: 0
       boneIndex[0]: 4
       boneIndex[1]: 1
       boneIndex[2]: 0
       boneIndex[3]: 0
-    - weight[0]: 0.7419765
-      weight[1]: 0.25802344
+    - weight[0]: 0.633333
+      weight[1]: 0.366667
       weight[2]: 0
       weight[3]: 0
       boneIndex[0]: 1
       boneIndex[1]: 0
       boneIndex[2]: 0
       boneIndex[3]: 0
-    - weight[0]: 1
+    - weight[0]: 0.99999994
       weight[1]: 0
       weight[2]: 0
       weight[3]: 0
