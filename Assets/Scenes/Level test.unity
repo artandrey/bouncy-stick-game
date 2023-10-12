@@ -399,7 +399,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1700,12 +1700,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1221494098, guid: 8aa816869a80b4643817a2b942cb21c0, type: 3}
+  m_Sprite: {fileID: 1833704280, guid: 9cc550ede01fe294fa274bc398dc7739, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8300481, y: 3.8099997}
+  m_Size: {x: 0.8502628, y: 3.8300002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1962,7 +1962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2330006168312020654, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
       propertyPath: boostX
-      value: 0.5
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 2330006168312020654, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
       propertyPath: thrust
@@ -1980,6 +1980,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 416bbb204f687334d89f401857099dce, type: 2}
+    - target: {fileID: 3585936161553608001, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3919287027041852788, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.93
@@ -2026,7 +2030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4071680422753714516, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
       propertyPath: boostX
-      value: 0.5
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 4071680422753714516, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
       propertyPath: thrust
