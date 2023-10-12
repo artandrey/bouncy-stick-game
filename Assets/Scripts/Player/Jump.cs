@@ -18,9 +18,6 @@ public class Jump : MonoBehaviour
 
     }
 
-
-
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         float radiansAngleIncludingRotation = (rb.transform.rotation.eulerAngles.z + angle) * Mathf.Deg2Rad;
