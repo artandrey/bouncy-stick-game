@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 4
   angle: 0
+  boostX: 0
   rb: {fileID: 3585936161553608001}
 --- !u!1 &1220648448821830006
 GameObject:
@@ -140,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 8.5
   angle: 270
+  boostX: 0
   rb: {fileID: 3585936161553608001}
 --- !u!70 &5965957704063561005
 CapsuleCollider2D:
@@ -223,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 8.5
   angle: 90
+  boostX: 0
   rb: {fileID: 3585936161553608001}
 --- !u!70 &1332340442179117777
 CapsuleCollider2D:
@@ -272,6 +275,7 @@ GameObject:
   - component: {fileID: 3585936161553608001}
   - component: {fileID: 2397679860730526479}
   - component: {fileID: 8576259406514175167}
+  - component: {fileID: 8030954055486353053}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -436,6 +440,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 250
+--- !u!95 &8030954055486353053
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054293098632828285}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2a13bd593d7a744ba36d72644e6e92f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6884472441284611704
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 4
   angle: 180
+  boostX: 0
   rb: {fileID: 3585936161553608001}
 --- !u!1001 &1449432833716025549
 PrefabInstance:
