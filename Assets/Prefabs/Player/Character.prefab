@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 8.5
   angle: 270
-  boostX: 0
+  boostX: 0.78
   rb: {fileID: 3585936161553608001}
 --- !u!70 &5965957704063561005
 CapsuleCollider2D:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 8.5
   angle: 90
-  boostX: 0
+  boostX: 0.78
   rb: {fileID: 3585936161553608001}
 --- !u!70 &1332340442179117777
 CapsuleCollider2D:
