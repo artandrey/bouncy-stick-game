@@ -621,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 300459228}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 0, z: -10}
+  m_LocalPosition: {x: 1.8, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3153,10 +3153,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1746755864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a12c33ecba8e849933d8668cbd6490, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c7f33b894577404284dec16f50c3b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxCamera: {fileID: 300459233}
+  parallaxEffectMultiplier: {x: 0, y: 0}
+  cameraTransform: {fileID: 0}
+  lastCameraPosition: {x: 0, y: 0, z: 0}
+  textureUnitSizeX: 0
 --- !u!1001 &1783121667
 PrefabInstance:
   m_ObjectHideFlags: 0
