@@ -1,44 +1,32 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class ParallaxBackground : MonoBehaviour
+public class ParallaxBackgroud: MonoBehaviour
 {
-    public ParallaxCamera parallaxCamera;
-    List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
+    [SerializeField] private Vector2 parallaxEffectMultiplier;
 
-    void Start()
+    private Transform cameraTransform;
+    private Vector3 lastCameraPosition;
+    private float textureUnitSizeX;
+
+    private void Start()
     {
-        if (parallaxCamera == null)
-            parallaxCamera = Camera.main.GetComponent<ParallaxCamera>();
-
-        if (parallaxCamera != null)
-            parallaxCamera.onCameraTranslate += Move;
-
-        SetLayers();
+        cameraTransform = Camera.main.transform;
+        lastCameraPosition= cameraTransform.position;
+        Sprite sprite = GetComponent<SpriteRenderer>().sprite;
+        Texture2D texture = sprite.texture;
+        textureUnitSizeX = texture.width / sprite.pixelsPerUnit;
     }
 
-    void SetLayers()
+    private void LateUpdate()
     {
-        parallaxLayers.Clear();
+        Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
+        transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y);
+        lastCameraPosition = cameraTransform.position;
 
-        for (int i = 0; i < transform.childCount; i++)
+        if (Mathf.Abs(cameraTransform.position.x - transform.position.x)>= textureUnitSizeX)
         {
-            ParallaxLayer layer = transform.GetChild(i).GetComponent<ParallaxLayer>();
-
-            if (layer != null)
-            {
-                layer.name = "Layer-" + i;
-                parallaxLayers.Add(layer);
-            }
-        }
-    }
-
-    void Move(float delta)
-    {
-        foreach (ParallaxLayer layer in parallaxLayers)
-        {
-            layer.Move(delta);
+            float offsetPositionX = (cameraTransform.position.x - transform.position.x) % textureUnitSizeX;
+            transform.position = new Vector3(cameraTransform.position.x + offsetPositionX, transform.position.y);
         }
     }
 }
