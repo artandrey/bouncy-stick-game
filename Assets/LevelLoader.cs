@@ -10,15 +10,30 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private Transform levelPoint;
 
+    private GameObject currentLevel;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        LoadLevel(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LoadLevel(int index)
     {
-        
+        if (currentLevel != null)
+        {
+            Destroy(currentLevel);
+        }
+        currentLevel = Instantiate(levels[index], levelPoint);
+    }
+
+    public void Next()
+    {
+
+    }
+
+    public void Previous()
+    {
+
     }
 }
