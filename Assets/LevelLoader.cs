@@ -5,35 +5,71 @@ using UnityEngine;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField]
+    private LoadScreenControl _loadScreenControl;
+
+    [SerializeField]
     private GameObject[] levels;
 
     [SerializeField]
     private Transform levelPoint;
 
-    private GameObject currentLevel;
+    [SerializeField]
+    private GameObject player;
 
-    // Start is called before the first frame update
-    void Start()
+    private GameObject currentLevel;
+    private int levelIndex;
+
+    private void Start()
     {
+        _loadScreenControl.onScreenOffEnded += TimeOn;
         LoadLevel(0);
+    }
+
+    private void TimeOn()
+    {
+        Time.timeScale = 1;
+    }
+
+    private void TimeOff()
+    {
+        Time.timeScale = 0;
+    }
+
+    private void OnDestroy()
+    {
+        _loadScreenControl.onScreenOffEnded -= TimeOn;
     }
 
     private void LoadLevel(int index)
     {
-        if (currentLevel != null)
+        if (index >= 0 && index < levels.Length)
         {
-            Destroy(currentLevel);
+            TimeOff();
+            _loadScreenControl.ScreenOn();
+            if (currentLevel != null)
+            {
+                Destroy(currentLevel);
+            }
+
+            levelIndex = index;
+            currentLevel = Instantiate(levels[index], levelPoint);
+            currentLevel.GetComponent<LevelControl>().Initialize(player);
+            _loadScreenControl.ScreenOff();
+            return;
         }
-        currentLevel = Instantiate(levels[index], levelPoint);
+
+        Debug.LogError($"index:{index} out of bounce");
     }
 
     public void Next()
     {
-
+        levelIndex += 1;
+        LoadLevel(levelIndex);
     }
 
     public void Previous()
     {
-
+        levelIndex -= 1;
+        LoadLevel(levelIndex);
     }
 }
