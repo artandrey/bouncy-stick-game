@@ -1028,6 +1028,10 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3585936161553608001, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3623726027973261746, guid: d9a9799bee645cb448a5b0bbe8c5b9d8, type: 3}
       propertyPath: m_Layer
       value: 0

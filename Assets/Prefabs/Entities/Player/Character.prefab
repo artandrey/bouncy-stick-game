@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 3585936161553608001}
   - component: {fileID: 5254193930087156479}
   - component: {fileID: 4866662041613136408}
-  - component: {fileID: 4927898263507529167}
+  - component: {fileID: 4378938179433015209}
   m_Layer: 3
   m_Name: Character
   m_TagString: Player
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 229
---- !u!95 &4927898263507529167
+--- !u!95 &4378938179433015209
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
