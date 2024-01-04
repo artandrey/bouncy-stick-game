@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Fam/fan (1).png.meta
+guid: 9047ad80e69f8fa499507b6af86a0c13
+========
 guid: 7a1f9b4d749783e46a83d2ef3a93a4b2
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Sprites/Enitites/trap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

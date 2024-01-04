@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/UI/ScreenOn.anim.meta
+guid: a1b508338d3157c4aae394e5845a7043
+========
 guid: cd3cda45d6553294db6b9201f1f9e800
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/UI/Load.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
