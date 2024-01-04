@@ -12,17 +12,20 @@ public class Jump : MonoBehaviour
 
     public Rigidbody2D rb;
 
+<<<<<<< HEAD:Assets/Scripts/Player/Jump.cs
 
     void Start()
     {
 
     }
 
+=======
+>>>>>>> added trap changed player:Assets/Scripts/Entities/Player/Jump.cs
     void OnCollisionEnter2D(Collision2D collision)
     {
         float radiansAngleIncludingRotation = (rb.transform.rotation.eulerAngles.z + angle) * Mathf.Deg2Rad;
 
-        float boostXQ = boostX + 1 * (1 - Mathf.Cos(radiansAngleIncludingRotation));
+        float boostXQ = boostX * (1 - Mathf.Cos(radiansAngleIncludingRotation)) + 1;
 
         rb.AddForce(new Vector2(Mathf.Cos(radiansAngleIncludingRotation) * thrust * boostX,
         Mathf.Sin(radiansAngleIncludingRotation) * thrust), ForceMode2D.Impulse);
