@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Fam/fan (11).png.meta
+guid: afda064591f78c64f86c0c8a16f9fcd9
+========
 guid: 17c350171f7a3ca479f830547c66d187
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/TextMesh Pro/Examples & Extras/Textures/Sunny Days - Seamless.jpg.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/UI/Load.anim.meta
+guid: cd3cda45d6553294db6b9201f1f9e800
+========
 guid: 1b8b4341bdd944a49842c9d8ac0f919a
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/Entities/BearTrapIdle.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000

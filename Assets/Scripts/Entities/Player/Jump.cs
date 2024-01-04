@@ -12,15 +12,6 @@ public class Jump : MonoBehaviour
 
     public Rigidbody2D rb;
 
-<<<<<<< HEAD:Assets/Scripts/Player/Jump.cs
-
-    void Start()
-    {
-
-    }
-
-=======
->>>>>>> added trap changed player:Assets/Scripts/Entities/Player/Jump.cs
     void OnCollisionEnter2D(Collision2D collision)
     {
         float radiansAngleIncludingRotation = (rb.transform.rotation.eulerAngles.z + angle) * Mathf.Deg2Rad;
