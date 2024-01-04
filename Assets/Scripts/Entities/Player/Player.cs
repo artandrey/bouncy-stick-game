@@ -9,9 +9,12 @@ public class Player : MonoBehaviour
 
     private bool isPlayerDead = false;
 
+    private Animator animator;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -32,5 +35,10 @@ public class Player : MonoBehaviour
     {
         rigidbody.bodyType = RigidbodyType2D.Kinematic;
         isPlayerDead = false;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        animator.SetTrigger("Jump");
     }
 }
