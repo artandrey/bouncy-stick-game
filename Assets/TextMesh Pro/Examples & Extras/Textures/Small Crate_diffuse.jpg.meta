@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Fam/fan (10).png.meta
+guid: ea2b29a636058dd4f9c687761c7af572
+========
 guid: 602cb87b6a29443b8636370ea0751574
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/TextMesh Pro/Examples & Extras/Textures/Small Crate_diffuse.jpg.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}

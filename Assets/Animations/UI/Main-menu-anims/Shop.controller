@@ -1,5 +1,8 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<<< HEAD:Assets/Animations/UI/Main-menu-anims/Settings.controller
+--- !u!1107 &-6091159645556843359
+========
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -23,6 +26,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
 --- !u!1107 &2729224561231133047
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/UI/Main-menu-anims/Shop.controller
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -32,26 +36,43 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
+<<<<<<<< HEAD:Assets/Animations/UI/Main-menu-anims/Settings.controller
+    m_State: {fileID: -2304228142113437708}
+    m_Position: {x: 200, y: 0, z: 0}
+========
     m_State: {fileID: 6160988774716655228}
     m_Position: {x: 310, y: -10, z: 0}
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/UI/Main-menu-anims/Shop.controller
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
+<<<<<<<< HEAD:Assets/Animations/UI/Main-menu-anims/Settings.controller
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: -2304228142113437708}
+--- !u!1102 &-2304228142113437708
+========
   m_EntryPosition: {x: 430, y: 130, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 6160988774716655228}
 --- !u!1102 &6160988774716655228
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/UI/Main-menu-anims/Shop.controller
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Assets/Animations/UI/Main-menu-anims/Settings.controller
+  m_Name: Settings
+========
   m_Name: Shop
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/UI/Main-menu-anims/Shop.controller
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -64,9 +85,38 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
+<<<<<<<< HEAD:Assets/Animations/UI/Main-menu-anims/Settings.controller
+  m_Motion: {fileID: 7400000, guid: 485e3a343958bf34ab774c1096a4a132, type: 2}
+========
   m_Motion: {fileID: 7400000, guid: 982acbabf812c794f973abb056584187, type: 2}
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/UI/Main-menu-anims/Shop.controller
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<<< HEAD:Assets/Animations/UI/Main-menu-anims/Settings.controller
+--- !u!91 &9100000
+AnimatorController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Settings
+  serializedVersion: 5
+  m_AnimatorParameters: []
+  m_AnimatorLayers:
+  - serializedVersion: 5
+    m_Name: Base Layer
+    m_StateMachine: {fileID: -6091159645556843359}
+    m_Mask: {fileID: 0}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+========
+>>>>>>>> ff74fcbfac84cf65e7c04b8dde6070f1987cfb26:Assets/Animations/UI/Main-menu-anims/Shop.controller
