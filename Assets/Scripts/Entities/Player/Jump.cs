@@ -12,20 +12,11 @@ public class Jump : MonoBehaviour
 
     public Rigidbody2D rb;
 
-
-    void Start()
-    {
-
-    }
-
-
-
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         float radiansAngleIncludingRotation = (rb.transform.rotation.eulerAngles.z + angle) * Mathf.Deg2Rad;
 
-        float boostXQ = boostX + 1 * (1 - Mathf.Cos(radiansAngleIncludingRotation));
+        float boostXQ = boostX * (1 - Mathf.Cos(radiansAngleIncludingRotation)) + 1;
 
         rb.AddForce(new Vector2(Mathf.Cos(radiansAngleIncludingRotation) * thrust * boostX,
         Mathf.Sin(radiansAngleIncludingRotation) * thrust), ForceMode2D.Impulse);
