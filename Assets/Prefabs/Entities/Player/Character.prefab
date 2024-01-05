@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 7.3
+  thrust: 7.4
   angle: 270
   boostX: 0.5
   rb: {fileID: 3585936161553608001}
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db2967a27074024bbb8e4286ba4b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 7.3
+  thrust: 7.4
   angle: 90
   boostX: 0.5
   rb: {fileID: 3585936161553608001}
