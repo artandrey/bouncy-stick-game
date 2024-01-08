@@ -215,7 +215,7 @@ AnimatorStateMachine:
     m_Position: {x: 320, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3971278299622303160}
-    m_Position: {x: 320, y: 30, z: 0}
+    m_Position: {x: 320, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6168973936989482604}
     m_Position: {x: 320, y: 210, z: 0}
@@ -240,7 +240,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PlayerBounce
-  m_Speed: 1
+  m_Speed: 1.84
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5439034180364758370}
