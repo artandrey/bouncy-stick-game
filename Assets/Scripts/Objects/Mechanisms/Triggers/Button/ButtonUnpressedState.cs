@@ -5,9 +5,9 @@ public class ButtonUnpressedState : TriggerBaseState<Button>
         base.OnEnabled(context);
     }
 
-    public override void OnTirggered()
+    public override void OnTirggered(Button context)
     {
-
-        base.OnTirggered();
+        context.SetState(context.PressedState);
+        base.OnTirggered(context);
     }
 }

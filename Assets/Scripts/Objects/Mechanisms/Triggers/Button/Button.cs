@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Button : TriggerBase
 {
-    private readonly ButtonPressedState pressedState = new();
-    private readonly ButtonUnpressedState unpressedState = new();
+    internal readonly ButtonPressedState PressedState = new();
+    internal readonly ButtonUnpressedState UnpressedState = new();
     private FiniteStateMachine<Button, TriggerBaseState<Button>> stateMachine;
 
     [SerializeField]
@@ -18,14 +18,20 @@ public class Button : TriggerBase
     void Start()
     {
         ButtonAnimator = GetComponent<Animator>();
-        stateMachine.SetState(unpressedState);
+        stateMachine.SetState(UnpressedState);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag(Tags.PLYAER))
         {
-            stateMachine.CurrentState.OnTirggered();
+            stateMachine.CurrentState.OnTirggered(this);
         }
     }
+
+    internal void SetState(TriggerBaseState<Button> state)
+    {
+        stateMachine.SetState(state);
+    }
+
 }

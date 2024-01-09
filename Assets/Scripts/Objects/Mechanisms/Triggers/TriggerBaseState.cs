@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class TriggerBaseState<C> : StateBase<C>
 {
-    public virtual void OnTirggered()
+    public virtual void OnTirggered(C context)
     {
 
     }
