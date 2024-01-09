@@ -7,12 +7,12 @@ public abstract class TriggerBase : MonoBehaviour, ITrigger
     public Action OnActivated { get; private set; }
     public Action OnDeactivated { get; private set; }
 
-    public void DispatchActivated()
+    protected internal void DispatchActivated()
     {
         OnActivated?.Invoke();
     }
 
-    public void DispatchDeactivated()
+    protected internal void DispatchDeactivated()
     {
         OnDeactivated?.Invoke();
     }
