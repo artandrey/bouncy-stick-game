@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1427760654, guid: 9cc550ede01fe294fa274bc398dc7739, type: 3}
+  m_Sprite: {fileID: 2007676696, guid: b9735ac5e82ba45438e4414d0544b75d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.2613173, y: 7.910001}
+    oldSize: {x: 4.42, y: 8.21}
     newSize: {x: 4.2613173, y: 7.910001}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -273,6 +273,22 @@ PrefabInstance:
     - target: {fileID: 3425696326383203097, guid: a3db8a61165c281499caa87766e6ec75, type: 3}
       propertyPath: m_Name
       value: Windmil-wings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279583250336749748, guid: a3db8a61165c281499caa87766e6ec75, type: 3}
+      propertyPath: m_Size.x
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279583250336749748, guid: a3db8a61165c281499caa87766e6ec75, type: 3}
+      propertyPath: m_Size.y
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279583250336749748, guid: a3db8a61165c281499caa87766e6ec75, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 818701969, guid: b9735ac5e82ba45438e4414d0544b75d, type: 3}
+    - target: {fileID: 4279583250336749748, guid: a3db8a61165c281499caa87766e6ec75, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
