@@ -25,7 +25,7 @@ public class Button : TriggerBase
     {
         if (collider.CompareTag(Tags.PLYAER))
         {
-            stateMachine.SetState(pressedState);
+            stateMachine.CurrentState.OnTirggered();
         }
     }
 }

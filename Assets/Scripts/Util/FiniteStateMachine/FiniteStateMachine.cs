@@ -20,6 +20,7 @@ public class FiniteStateMachine<C, S> where S : StateBase<C>
 
     public void SetState(S state)
     {
+        if (currentState == state) return;
         currentState = state;
         currentState.OnEnabled(context);
     }
