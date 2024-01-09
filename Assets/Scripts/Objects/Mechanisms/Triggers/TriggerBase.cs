@@ -4,8 +4,10 @@ using UnityEngine;
 
 public abstract class TriggerBase : MonoBehaviour, ITrigger
 {
-    public Action OnActivated { get; private set; }
-    public Action OnDeactivated { get; private set; }
+    public Action OnActivated { get; set; }
+    public Action OnDeactivated { get; set; }
+
+
 
     protected internal void DispatchActivated()
     {
@@ -16,4 +18,6 @@ public abstract class TriggerBase : MonoBehaviour, ITrigger
     {
         OnDeactivated?.Invoke();
     }
+
+    public abstract bool IsActivated();
 }

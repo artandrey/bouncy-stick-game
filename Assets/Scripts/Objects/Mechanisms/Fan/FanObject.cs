@@ -5,7 +5,6 @@ using UnityEngine;
 public class FanObject : MonoBehaviour, IActivable
 {
 
-
     private readonly FanOffState offState = new();
     private readonly FanOnState onState = new();
 
@@ -16,7 +15,7 @@ public class FanObject : MonoBehaviour, IActivable
     private ParticleSystem levitatingParticleSystem;
 
     [SerializeField]
-    internal bool isEnabled;
+    public bool IsEnabled { get; set; }
 
     private FiniteStateMachine<FanObject, StateBase<FanObject>> stateMachine;
 
@@ -25,13 +24,13 @@ public class FanObject : MonoBehaviour, IActivable
         stateMachine = new(this);
     }
 
-    void Start()
+    void Awake()
     {
         AreaEffector = GetComponent<AreaEffector2D>();
         FanAnimator = GetComponent<Animator>();
         levitatingParticleSystem = GetComponentInChildren<ParticleSystem>();
         AreaEffectorForceMagnitude = AreaEffector.forceMagnitude;
-        if (isEnabled)
+        if (IsEnabled)
         {
             stateMachine.SetState(onState);
         }
@@ -49,6 +48,11 @@ public class FanObject : MonoBehaviour, IActivable
     public void Off()
     {
         stateMachine.SetState(offState);
+    }
+
+    public void SetIsInitiallyActive(bool isActive)
+    {
+        IsEnabled = isActive;
     }
 
     internal void EnableParticles()

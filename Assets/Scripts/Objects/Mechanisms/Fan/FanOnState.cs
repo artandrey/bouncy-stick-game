@@ -6,7 +6,7 @@ public class FanOnState : StateBase<FanObject>
 {
     public override void OnEnabled(FanObject context)
     {
-        context.isEnabled = true;
+        context.IsEnabled = true;
         context.FanAnimator.SetBool("IsSpinning", true);
         context.AreaEffector.forceMagnitude = context.AreaEffectorForceMagnitude;
         context.EnableParticles();
