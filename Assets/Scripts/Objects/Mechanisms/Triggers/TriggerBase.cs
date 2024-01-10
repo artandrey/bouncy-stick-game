@@ -20,4 +20,9 @@ public abstract class TriggerBase : MonoBehaviour, ITrigger
     }
 
     public abstract bool IsActivated();
+
+    protected bool CheckIsTriggeredBy(Behaviour behaviour)
+    {
+        return behaviour.CompareTag(Tags.PLYAER);
+    }
 }

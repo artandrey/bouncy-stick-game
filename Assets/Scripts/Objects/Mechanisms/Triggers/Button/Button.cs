@@ -21,19 +21,12 @@ public class Button : TriggerBase
     void Start()
     {
         ButtonAnimator = GetComponent<Animator>();
-        if (IsPressed)
-        {
-            stateMachine.SetState(PressedState);
-        }
-        else
-        {
-            stateMachine.SetState(UnpressedState);
-        }
+        stateMachine.SetState(IsPressed ? PressedState : UnpressedState);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag(Tags.PLYAER))
+        if (CheckIsTriggeredBy(collider))
         {
             stateMachine.CurrentState.OnTirggered(this);
         }
