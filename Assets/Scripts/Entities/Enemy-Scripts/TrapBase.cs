@@ -3,15 +3,13 @@ using UnityEngine;
 
 public abstract class TrapBase : MonoBehaviour
 {
-    protected abstract void OnPlayerEnter(Player player);
+    protected abstract void OnEntityEnter(IEntity entity);
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag(Tags.PLYAER))
-        {
-            Player player = collider.GetComponent<Player>();
-            OnPlayerEnter(player);
-        }
+        IEntity entity = collider.GetComponent<IEntity>();
+        if (entity == null) return;
+        OnEntityEnter(entity);
     }
 
 }

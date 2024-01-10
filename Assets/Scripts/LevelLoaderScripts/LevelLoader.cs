@@ -8,13 +8,15 @@ public class LevelLoader : MonoBehaviour
     private LoadScreenControl _loadScreenControl;
 
     [SerializeField]
-    private GameObject[] levels;
+    private List<LevelControl> levels;
 
     [SerializeField]
     private Transform levelPoint;
 
+
     [SerializeField]
-    private GameObject player;
+
+    private Player player;
 
     private GameObject currentLevel;
     private int levelIndex;
@@ -22,6 +24,7 @@ public class LevelLoader : MonoBehaviour
     private void Start()
     {
         _loadScreenControl.onScreenOffEnded += TimeOn;
+        player.OnPlayerDeath += Restart;
         LoadLevel(0);
     }
 
@@ -42,23 +45,21 @@ public class LevelLoader : MonoBehaviour
 
     private void LoadLevel(int index)
     {
-        if (index >= 0 && index < levels.Length)
-        {
-            TimeOff();
-            _loadScreenControl.ScreenOn();
-            if (currentLevel != null)
-            {
-                Destroy(currentLevel);
-            }
 
-            levelIndex = index;
-            currentLevel = Instantiate(levels[index], levelPoint);
-            currentLevel.GetComponent<LevelControl>().Initialize(player);
-            _loadScreenControl.ScreenOff();
-            return;
+        TimeOff();
+        _loadScreenControl.ScreenOn();
+        if (currentLevel != null)
+        {
+            Destroy(currentLevel);
         }
 
-        Debug.LogError($"index:{index} out of bounce");
+        levelIndex = index;
+        LevelControl level = levels[index];
+        player.DispatchAlive();
+        player.transform.position = level.StartPoint.position;
+        currentLevel = Instantiate(levels[index].gameObject, levelPoint);
+        _loadScreenControl.ScreenOff();
+
     }
 
     public void Next()
@@ -70,6 +71,11 @@ public class LevelLoader : MonoBehaviour
     public void Previous()
     {
         levelIndex -= 1;
+        LoadLevel(levelIndex);
+    }
+
+    public void Restart()
+    {
         LoadLevel(levelIndex);
     }
 }

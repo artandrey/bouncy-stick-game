@@ -2,7 +2,7 @@
 
 public abstract class BearTrapStateBase : StateBase<BearTrap>
 {
-    public virtual void OnPlayerEnter(Player player, BearTrap context)
+    public virtual void OnPlayerEnter(IEntity entity, BearTrap context)
     {
 
     }

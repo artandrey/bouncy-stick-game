@@ -15,14 +15,14 @@ public class FiniteStateMachine<C, S> where S : StateBase<C>
 
     public void OnUpdate()
     {
-        currentState.OnUpdate(context);
+        currentState?.OnUpdate(context);
     }
 
     public void SetState(S state)
     {
         if (currentState == state) return;
         currentState = state;
-        currentState.OnEnabled(context);
+        currentState?.OnEnabled(context);
     }
 
 }
