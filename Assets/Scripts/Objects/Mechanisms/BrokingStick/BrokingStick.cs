@@ -8,6 +8,10 @@ public class BrokingStick : MonoBehaviour
     private Sprite[] states;
     [SerializeField]
     private int currentBorkeIndex = 0;
+    [SerializeField]
+    private int durability = 0;
+
+    private int currentDurability;
 
     private SpriteRenderer spriteRenderer;
 
@@ -17,6 +21,7 @@ public class BrokingStick : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         stickRigidbody = GetComponent<Rigidbody2D>();
+        currentDurability = durability;
         spriteRenderer.sprite = states[currentBorkeIndex];
     }
 
@@ -32,11 +37,11 @@ public class BrokingStick : MonoBehaviour
             OnBroken();
             return;
         }
-        else
-        {
-            currentBorkeIndex++;
-            spriteRenderer.sprite = states[currentBorkeIndex];
-        }
+        if (--currentDurability > 0) return;
+
+        currentBorkeIndex++;
+        currentDurability = durability;
+        spriteRenderer.sprite = states[currentBorkeIndex];
     }
 
     private void OnBroken()

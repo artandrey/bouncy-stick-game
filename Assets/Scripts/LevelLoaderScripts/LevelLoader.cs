@@ -83,6 +83,7 @@ public class LevelLoader : MonoBehaviour
         player.DispatchAlive();
         cameraScript.Reset();
         player.transform.position = level.StartPoint.position;
+        player.transform.rotation = level.StartPoint.rotation;
         currentLevel = Instantiate(levels[levelIndex].gameObject, levelPoint);
         currentLevel.GetComponent<RoomControl>().OnRoomComplited += Next;
         if (!isInitialLoad)
