@@ -5856,11 +5856,10 @@ MonoBehaviour:
   _loadScreenControl: {fileID: 34810201}
   levels:
   - {fileID: 3561557459647118987, guid: 1afaaee12a7f19c4b88ca47338a1e4da, type: 3}
-  - {fileID: 9012437393098565033, guid: 10f17a7ec5e6a8448a392f5109d74079, type: 3}
+  - {fileID: 3561557459647118987, guid: 86b7582dd624e0f4ba0448eba3fc248d, type: 3}
   levelPoint: {fileID: 902505245}
   player: {fileID: 849649714}
   cameraScript: {fileID: 52667242}
-  centerPoint: {fileID: 52667241}
 --- !u!1 &900954165
 GameObject:
   m_ObjectHideFlags: 0
