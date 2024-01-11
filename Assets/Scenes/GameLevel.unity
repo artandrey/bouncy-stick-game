@@ -5855,7 +5855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScreenControl: {fileID: 34810201}
   levels:
-  - {fileID: -7299700970584711815, guid: 91785d55651100c4c9783059d6e45314, type: 3}
+  - {fileID: 1116928881632262772, guid: 19284f74e3c93b543a51bb74a2ced914, type: 3}
   - {fileID: 9012437393098565033, guid: 10f17a7ec5e6a8448a392f5109d74079, type: 3}
   levelPoint: {fileID: 902505245}
   player: {fileID: 849649714}
@@ -11446,7 +11446,7 @@ SpriteShapeRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_MaskInteraction: 0
   m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
