@@ -18,13 +18,20 @@ public class LevelLoader : MonoBehaviour
 
     private Player player;
 
+    [SerializeField]
+    private CameraScript cameraScript;
+
     private GameObject currentLevel;
     private int levelIndex;
+
+    private bool isInitialLoad = true;
 
     private void Start()
     {
         _loadScreenControl.onScreenOffEnded += TimeOn;
+        _loadScreenControl.onSreenOnEnded += LoadNewLevel;
         player.OnPlayerDeath += Restart;
+        player.OnPlayerDeathStart += cameraScript.ScaleUp;
         LoadLevel(0);
     }
 
@@ -41,25 +48,46 @@ public class LevelLoader : MonoBehaviour
     private void OnDestroy()
     {
         _loadScreenControl.onScreenOffEnded -= TimeOn;
+        _loadScreenControl.onSreenOnEnded -= LoadNewLevel;
+        player.OnPlayerDeath -= Restart;
+        player.OnPlayerDeathStart -= cameraScript.ScaleUp;
+    }
+
+    private void StartLevelLoad()
+    {
+        TimeOff();
+        _loadScreenControl.ScreenOn();
     }
 
     private void LoadLevel(int index)
     {
+        levelIndex = index;
+        if (isInitialLoad)
+        {
+            LoadNewLevel();
+            return;
+        }
+        StartLevelLoad();
 
-        TimeOff();
-        _loadScreenControl.ScreenOn();
+    }
+
+    private void LoadNewLevel()
+    {
         if (currentLevel != null)
         {
             Destroy(currentLevel);
         }
 
-        levelIndex = index;
-        LevelControl level = levels[index];
+        LevelControl level = levels[levelIndex];
         player.DispatchAlive();
+        cameraScript.Reset();
         player.transform.position = level.StartPoint.position;
-        currentLevel = Instantiate(levels[index].gameObject, levelPoint);
-        _loadScreenControl.ScreenOff();
-
+        currentLevel = Instantiate(levels[levelIndex].gameObject, levelPoint);
+        if (!isInitialLoad)
+        {
+            _loadScreenControl.ScreenOff();
+        }
+        isInitialLoad = false;
     }
 
     public void Next()

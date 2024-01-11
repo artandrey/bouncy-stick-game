@@ -53,8 +53,7 @@ public class Player : MonoBehaviour, IEntity
 
     public void DispatchAlive()
     {
-        rigidbody.bodyType = RigidbodyType2D.Dynamic;
-        isPlayerDead = false;
+        stateMachine.SetState(aliveState);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

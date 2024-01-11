@@ -26,6 +26,11 @@ public class CameraScript : MonoBehaviour
         stateMachine.SetState(initialState);
     }
 
+    void Update()
+    {
+        stateMachine.OnUpdate();
+    }
+
     public void ScaleUp()
     {
         stateMachine.SetState(scalingUpState);

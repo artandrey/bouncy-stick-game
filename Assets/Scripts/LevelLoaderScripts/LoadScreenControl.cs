@@ -8,6 +8,8 @@ public class LoadScreenControl : MonoBehaviour
 
     public event Action onScreenOffEnded;
 
+    public event Action onSreenOnEnded;
+
     public void ScreenOn()
     {
         animator.SetTrigger("ScreenOn");
@@ -21,5 +23,10 @@ public class LoadScreenControl : MonoBehaviour
     public void ScreenOffCompleted()
     {
         onScreenOffEnded?.Invoke();
+    }
+
+    public void ScreenOnCompleted()
+    {
+        onSreenOnEnded?.Invoke();
     }
 }
