@@ -17,9 +17,6 @@ public class Squirrel : MonoBehaviour
     [SerializeField]
     private Transform throwPoint;
 
-    [SerializeField]
-    private float throwedSize = 0.4f;
-
     internal SquirrelIdleState idleState = new();
     internal SquirrelThrowingState throwingState = new();
 

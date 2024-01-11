@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 7648942832965491119}
   - component: {fileID: -3500911698514802249}
   - component: {fileID: 70441020147172376}
+  - component: {fileID: 6592778709480415553}
   m_Layer: 0
   m_Name: Oak seed
   m_TagString: Untagged
@@ -287,3 +288,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.37}
   m_Size: {x: 1.72, y: 2.55}
   m_Direction: 0
+--- !u!114 &6592778709480415553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541222674057682745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5630f61dbd8c54b4a844e53dec109a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -8,7 +8,7 @@ public class LevelLoader : MonoBehaviour
     private LoadScreenControl _loadScreenControl;
 
     [SerializeField]
-    private List<LevelControl> levels;
+    private List<RoomControl> levels;
 
     [SerializeField]
     private Transform levelPoint;
@@ -20,9 +20,6 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField]
     private CameraScript cameraScript;
-
-    [SerializeField]
-    private Transform centerPoint;
 
     private GameObject currentLevel;
     private int levelIndex;
@@ -78,14 +75,16 @@ public class LevelLoader : MonoBehaviour
     {
         if (currentLevel != null)
         {
+            currentLevel.GetComponent<RoomControl>().OnRoomComplited -= Next;
             Destroy(currentLevel);
         }
 
-        LevelControl level = levels[levelIndex];
+        RoomControl level = levels[levelIndex];
         player.DispatchAlive();
         cameraScript.Reset();
         player.transform.position = level.StartPoint.position;
         currentLevel = Instantiate(levels[levelIndex].gameObject, levelPoint);
+        currentLevel.GetComponent<RoomControl>().OnRoomComplited += Next;
         if (!isInitialLoad)
         {
             _loadScreenControl.ScreenOff();
