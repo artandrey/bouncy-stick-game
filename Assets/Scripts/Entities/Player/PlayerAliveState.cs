@@ -14,7 +14,25 @@ public class PlayerAliveState : StateBase<Player>
 
     public override void OnUpdate(Player context)
     {
-        context.transform.Rotate(Vector3.forward * context.turnSpeed * Input.GetAxis("Horizontal") * Time.deltaTime);
+        float inputHorizontalAxis = Input.GetAxis("Horizontal");
+        context.animator.SetInteger("SightDirection", RoundDirection(inputHorizontalAxis) * -1);
+        context.transform.Rotate(Vector3.forward * context.turnSpeed * inputHorizontalAxis * Time.deltaTime);
         base.OnUpdate(context);
+    }
+
+    private int RoundDirection(float value)
+    {
+        if (value > 0.0f)
+        {
+            return Mathf.CeilToInt(value);
+        }
+        else if (value < 0.0f)
+        {
+            return Mathf.FloorToInt(value);
+        }
+        else
+        {
+            return 0;
+        }
     }
 }

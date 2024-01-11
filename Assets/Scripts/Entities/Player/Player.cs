@@ -64,7 +64,7 @@ public class Player : MonoBehaviour, IEntity
     public void OnCollisionEnter2D(Collision2D collision)
     {
         animator.SetTrigger("Jump");
-        knockAudioSource.pitch = UnityEngine.Random.RandomRange(0.1f, 0.04f);
+        knockAudioSource.pitch = UnityEngine.Random.RandomRange(0.1f, 0.02f);
         knockAudioSource.Play();
     }
 
