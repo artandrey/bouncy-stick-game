@@ -21,6 +21,9 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private CameraScript cameraScript;
 
+    [SerializeField]
+    private Transform centerPoint;
+
     private GameObject currentLevel;
     private int levelIndex;
 

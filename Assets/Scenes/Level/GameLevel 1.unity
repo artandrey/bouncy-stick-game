@@ -5713,6 +5713,7 @@ Transform:
   - {fileID: 1252144325}
   - {fileID: 900954166}
   - {fileID: 883534681}
+  - {fileID: 902505245}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772201682
@@ -5856,9 +5857,10 @@ MonoBehaviour:
   levels:
   - {fileID: 3561557459647118987, guid: 1afaaee12a7f19c4b88ca47338a1e4da, type: 3}
   - {fileID: 9012437393098565033, guid: 10f17a7ec5e6a8448a392f5109d74079, type: 3}
-  levelPoint: {fileID: 39879532}
+  levelPoint: {fileID: 902505245}
   player: {fileID: 849649714}
   cameraScript: {fileID: 52667242}
+  centerPoint: {fileID: 52667241}
 --- !u!1 &900954165
 GameObject:
   m_ObjectHideFlags: 0
@@ -5885,6 +5887,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 563111937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &902505244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902505245}
+  m_Layer: 0
+  m_Name: Level point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &902505245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902505244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.15, y: -0.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

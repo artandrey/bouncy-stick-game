@@ -589,12 +589,20 @@ PrefabInstance:
       value: Wood (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4849034913283291689, guid: 02a6979ad15b50546af05860221cf34f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2947
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849034913283291689, guid: 02a6979ad15b50546af05860221cf34f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4738
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849034913283291689, guid: 02a6979ad15b50546af05860221cf34f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.59
+      value: 11.3587
       objectReference: {fileID: 0}
     - target: {fileID: 4849034913283291689, guid: 02a6979ad15b50546af05860221cf34f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8
+      value: -0.7264
       objectReference: {fileID: 0}
     - target: {fileID: 4849034913283291689, guid: 02a6979ad15b50546af05860221cf34f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -652,11 +660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3731124688344390280, guid: f18019d03a7e51b4a96964b066eac9ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3731124688344390280, guid: f18019d03a7e51b4a96964b066eac9ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.61
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3731124688344390280, guid: f18019d03a7e51b4a96964b066eac9ba, type: 3}
       propertyPath: m_LocalPosition.z
