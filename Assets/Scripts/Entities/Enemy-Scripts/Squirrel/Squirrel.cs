@@ -13,11 +13,10 @@ public class Squirrel : MonoBehaviour
     private float throwStrength;
     [SerializeField]
     private GameObject throwedObject;
+    [SerializeField]
+    private Transform throwPoint;
 
-    void Start()
-    {
 
-    }
     void Update()
     {
         if (timer < 0)
