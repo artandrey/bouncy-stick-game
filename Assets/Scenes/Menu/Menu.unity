@@ -1564,7 +1564,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 490641205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1374797562}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: ToggleMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &490641205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,7 +1931,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1374797562}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
-        m_MethodName: SetSFXVolume
+        m_MethodName: OnSFXSliderChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2937,6 +2949,7 @@ MonoBehaviour:
   myMixer: {fileID: 24100000, guid: 1b6fa4f475af38e498f0b5fc6a25ad72, type: 2}
   musicSlider: {fileID: 1639695102}
   SFXSlider: {fileID: 657481227}
+  myToggle: {fileID: 0}
 --- !u!114 &1374797563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3473,7 +3486,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1374797562}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
-        m_MethodName: SetMusicVolume
+        m_MethodName: OnMusicSliderChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3518,6 +3531,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1501272363, guid: b9735ac5e82ba45438e4414d0544b75d, type: 3}
+    - target: {fileID: 2636048121238931513, guid: bcba37b9440d7ae41872b42742c39304, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636048121238931513, guid: bcba37b9440d7ae41872b42742c39304, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 7.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3369784816286576392, guid: bcba37b9440d7ae41872b42742c39304, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.86
@@ -4253,7 +4274,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1817294334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1374797562}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: ToggleSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1817294334
 MonoBehaviour:
   m_ObjectHideFlags: 0
