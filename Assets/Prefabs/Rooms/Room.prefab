@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawnpoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3731124688344390280}
+  - component: {fileID: 8734034705531470309}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -66,6 +67,19 @@ Transform:
   - {fileID: 8797490623898797047}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8734034705531470309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185957574687335964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42b835f15861ac49bae0448762bde23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPoint: {fileID: 5610670328203835526}
 --- !u!1 &5802258558054973351
 GameObject:
   m_ObjectHideFlags: 0
