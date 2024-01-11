@@ -6,20 +6,8 @@ public class LevelControl : MonoBehaviour
 {
     [SerializeField]
     private Transform startPoint;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
+    public Transform StartPoint { get => startPoint; }
 
-    public void Initialize(GameObject player)
-    {
-        player.transform.position = startPoint.position;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

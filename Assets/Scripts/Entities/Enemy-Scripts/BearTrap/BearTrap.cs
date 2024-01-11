@@ -21,15 +21,15 @@ public class BearTrap : TrapBase
         SetState(new BearTrapActiveState());
     }
 
-    protected override void OnPlayerEnter(Player player)
+    protected override void OnEntityEnter(IEntity entity)
     {
-        stateMachine.CurrentState.OnPlayerEnter(player, this);
+        stateMachine.CurrentState.OnPlayerEnter(entity, this);
     }
 
-    private float GetPlayerHeight(Player player)
+    private float GetPlayerHeight(IEntity entity)
     {
-        var transform = player.transform;
-        var collider = player.GetComponent<Collider2D>();
+        var transform = entity.gameObject.transform;
+        var collider = entity.gameObject.GetComponent<Collider2D>();
         return collider.bounds.size.y;
     }
 

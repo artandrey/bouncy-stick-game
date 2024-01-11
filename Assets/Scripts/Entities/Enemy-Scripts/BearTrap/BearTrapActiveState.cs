@@ -9,19 +9,19 @@ public class BearTrapActiveState : BearTrapStateBase
         base.OnEnabled(context);
     }
 
-    public override void OnPlayerEnter(Player player, BearTrap context)
+    public override void OnPlayerEnter(IEntity entity, BearTrap context)
     {
-        player.DispatchDeath();
         var lockPoint = context.transform.position;
-        player.transform.position = lockPoint + new Vector3(0, GetPlayerHeight(player) / 2, 0);
+        entity.gameObject.transform.position = lockPoint + new Vector3(0, GetPlayerHeight(entity.gameObject) / 2, 0);
+        entity.Die();
         context.SetState(new BearTrapActivatedState());
-        base.OnPlayerEnter(player, context);
+        base.OnPlayerEnter(entity, context);
     }
 
-    private float GetPlayerHeight(Player player)
+    private float GetPlayerHeight(GameObject gameObject)
     {
-        var transform = player.transform;
-        var collider = player.GetComponent<Collider2D>();
+        var transform = gameObject.transform;
+        var collider = gameObject.GetComponent<Collider2D>();
         return collider.bounds.size.y;
 
     }

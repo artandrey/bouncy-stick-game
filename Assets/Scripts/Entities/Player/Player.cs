@@ -1,44 +1,68 @@
+using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IEntity
 {
 
     [SerializeField]
-    private float turnSpeed = 250f;
-    private new Rigidbody2D rigidbody;
+    internal float turnSpeed = 250f;
+    internal new Rigidbody2D rigidbody;
 
-    private bool isPlayerDead = false;
+    internal bool isPlayerDead = false;
 
-    private Animator animator;
+    internal Animator animator;
+
+    public Action OnPlayerDeath { get; set; }
+
+    public Action OnPlayerDeathStart { get; set; }
+
+    private FiniteStateMachine<Player, StateBase<Player>> stateMachine;
+
+    internal readonly PlayerAliveState aliveState = new();
+
+    internal readonly PlayerDeadState deadState = new();
+
+    internal readonly PlayerDyingState dyingState = new();
+
+    public Player()
+    {
+        stateMachine = new(this);
+    }
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        stateMachine.SetState(aliveState);
     }
 
     void Update()
     {
-        if (!isPlayerDead)
-        {
-            transform.Rotate(Vector3.forward * turnSpeed * Input.GetAxis("Horizontal") * Time.deltaTime);
-        }
+        stateMachine.OnUpdate();
     }
 
     public void DispatchDeath()
     {
-        rigidbody.bodyType = RigidbodyType2D.Static;
-        isPlayerDead = true;
+        stateMachine.SetState(deadState);
+    }
+
+    public void DispatchDeathStart()
+    {
+        stateMachine.SetState(dyingState);
     }
 
     public void DispatchAlive()
     {
-        rigidbody.bodyType = RigidbodyType2D.Kinematic;
-        isPlayerDead = false;
+        stateMachine.SetState(aliveState);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         animator.SetTrigger("Jump");
+    }
+
+    public void Die()
+    {
+        DispatchDeathStart();
     }
 }
