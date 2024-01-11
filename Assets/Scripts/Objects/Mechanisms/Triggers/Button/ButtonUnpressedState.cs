@@ -2,6 +2,7 @@ public class ButtonUnpressedState : TriggerBaseState<Button>
 {
     public override void OnEnabled(Button context)
     {
+        context.tickingAudio.Pause();
         context.DispatchDeactivated();
         context.ButtonAnimator.SetBool("IsPressed", false);
         base.OnEnabled(context);

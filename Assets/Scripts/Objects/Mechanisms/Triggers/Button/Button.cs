@@ -11,6 +11,9 @@ public class Button : TriggerBase
 
     [SerializeField]
     internal float UnpressDelay;
+
+    [SerializeField]
+    internal AudioSource tickingAudio;
     internal Animator ButtonAnimator { get; private set; }
 
     public Button()

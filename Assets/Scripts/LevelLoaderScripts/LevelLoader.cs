@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -84,6 +85,8 @@ public class LevelLoader : MonoBehaviour
         cameraScript.Reset();
         player.transform.position = level.StartPoint.position;
         player.transform.rotation = level.StartPoint.rotation;
+        player.rigidbody.isKinematic = false;
+        player.rigidbody.velocity = Vector2.zero;
         currentLevel = Instantiate(levels[levelIndex].gameObject, levelPoint);
         currentLevel.GetComponent<RoomControl>().OnRoomComplited += Next;
         if (!isInitialLoad)
@@ -96,6 +99,10 @@ public class LevelLoader : MonoBehaviour
     public void Next()
     {
         levelIndex += 1;
+        if (levelIndex >= levels.Count)
+        {
+            BackToMenu();
+        }
         LoadLevel(levelIndex);
     }
 
@@ -108,5 +115,10 @@ public class LevelLoader : MonoBehaviour
     public void Restart()
     {
         LoadLevel(levelIndex);
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("LevelChoose");
     }
 }

@@ -6,6 +6,10 @@ public class Player : MonoBehaviour, IEntity
 
     [SerializeField]
     internal float turnSpeed = 250f;
+
+    [SerializeField]
+    internal AudioSource knockAudioSource;
+
     internal new Rigidbody2D rigidbody;
 
     internal bool isPlayerDead = false;
@@ -56,9 +60,12 @@ public class Player : MonoBehaviour, IEntity
         stateMachine.SetState(aliveState);
     }
 
+    [Obsolete]
     public void OnCollisionEnter2D(Collision2D collision)
     {
         animator.SetTrigger("Jump");
+        knockAudioSource.pitch = UnityEngine.Random.RandomRange(0.1f, 0.04f);
+        knockAudioSource.Play();
     }
 
     public void Die()

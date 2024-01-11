@@ -5,6 +5,7 @@ public class ButtonPressedState : TriggerBaseState<Button>
     private float timer = 0;
     public override void OnEnabled(Button context)
     {
+        context.tickingAudio.Play();
         timer = context.UnpressDelay;
         context.DispatchActivated();
         context.ButtonAnimator.SetBool("IsPressed", true);
