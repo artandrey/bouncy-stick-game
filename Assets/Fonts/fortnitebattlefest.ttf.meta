@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b68b5b06c577d5744bf3ef858b5801bd
+guid: 797e42c9c0fff574781fec34c41dc589
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,8 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Balsamiq Sans
   fontNames:
-  - Balsamiq Sans
+  - FORTNITE BATTLEFEST
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
