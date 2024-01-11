@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class OakSeed : MonoBehaviour
 {
-    private readonly OakSeedDestroyState destroyState = new();
-    private readonly OakSeedIdleState idleState = new();
+    internal readonly OakSeedDestroyState destroyState = new();
+    internal readonly OakSeedIdleState idleState = new();
     private FiniteStateMachine<OakSeed, StateBase<OakSeed>> stateMachine;
 
     internal Animator animator;
@@ -20,6 +20,7 @@ public class OakSeed : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         stateMachine.SetState(idleState);
     }
 
@@ -35,7 +36,7 @@ public class OakSeed : MonoBehaviour
 
     private void OnDestroyEnd()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
 }

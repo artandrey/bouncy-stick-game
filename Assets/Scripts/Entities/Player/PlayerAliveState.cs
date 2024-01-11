@@ -8,6 +8,7 @@ public class PlayerAliveState : StateBase<Player>
     {
         context.animator.SetBool("Dead", false);
         context.rigidbody.bodyType = RigidbodyType2D.Dynamic;
+        context.rigidbody.velocity = Vector2.zero;
         context.isPlayerDead = false;
         base.OnEnabled(context);
     }

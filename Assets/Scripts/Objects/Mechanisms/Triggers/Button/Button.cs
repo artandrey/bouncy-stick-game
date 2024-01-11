@@ -7,10 +7,10 @@ public class Button : TriggerBase
     private FiniteStateMachine<Button, TriggerBaseState<Button>> stateMachine;
 
     [SerializeField]
-    public bool IsPressed { get; set; }
+    public bool IsPressed;
 
     [SerializeField]
-    internal float UnpressDelay { get; set; }
+    internal float UnpressDelay;
     internal Animator ButtonAnimator { get; private set; }
 
     public Button()
@@ -22,6 +22,11 @@ public class Button : TriggerBase
     {
         ButtonAnimator = GetComponent<Animator>();
         stateMachine.SetState(IsPressed ? PressedState : UnpressedState);
+    }
+
+    void Update()
+    {
+        stateMachine.OnUpdate();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
