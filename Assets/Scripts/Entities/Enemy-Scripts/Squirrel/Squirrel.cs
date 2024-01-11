@@ -5,10 +5,10 @@ using UnityEngine;
 public class Squirrel : MonoBehaviour
 {
 
-    private float timer = 0;
+    internal float timer = 0;
 
     [SerializeField]
-    private float throwDelay;
+    internal float throwDelay;
 
     [SerializeField]
     private float throwForce;
@@ -20,6 +20,8 @@ public class Squirrel : MonoBehaviour
     internal SquirrelIdleState idleState = new();
     internal SquirrelThrowingState throwingState = new();
 
+    private FiniteStateMachine<Squirrel, StateBase<Squirrel>> stateMachine;
+
     private Animator squirrelAnimator;
 
     void Start()
@@ -29,14 +31,10 @@ public class Squirrel : MonoBehaviour
 
     void Update()
     {
-        if (timer < 0)
-        {
-            timer = throwDelay;
-            StartThrow();
-        }
+
     }
 
-    private void StartThrow()
+    internal void StartThrow()
     {
 
     }
