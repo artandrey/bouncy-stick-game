@@ -9,9 +9,10 @@ public class LevelService : MonoBehaviour
         PlayerPrefs.SetInt("CompletedLevelsCount", levelNumber);
     }
 
-    static public bool IsLevelCompleted(int levelNumber)
+    static public bool IsLevelOpended(int levelNumber)
     {
+
         if (levelNumber == 1) return true;
-        return PlayerPrefs.GetInt("CompletedLevelsCount") >= levelNumber;
+        return levelNumber <= PlayerPrefs.GetInt("CompletedLevelsCount") + 1;
     }
 }

@@ -107,6 +107,7 @@ public class LevelLoader : MonoBehaviour
         {
             BackToMenu();
             LevelService.SetLevelCompleted(levelNumber);
+            return;
         }
         LoadLevel(roomIndex);
     }

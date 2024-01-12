@@ -20,13 +20,13 @@ public class LevelSelector : MonoBehaviour
         levelText.text = level.ToString();
         image = GetComponent<Image>();
         initialColor = image.color;
-        isLevelCompleted = LevelService.IsLevelCompleted(level);
+        isLevelCompleted = LevelService.IsLevelOpended(level);
         if (!isLevelCompleted) image.color = disabledColor;
     }
 
     public void OpenScene()
     {
         if (!isLevelCompleted) return;
-        SceneManager.LoadScene("Game Level " + level.ToString());
+        SceneManager.LoadScene("GameLevel " + level.ToString());
     }
 }
