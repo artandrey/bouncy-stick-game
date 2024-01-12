@@ -15,7 +15,7 @@ public class FanObject : MonoBehaviour, IActivable
     private ParticleSystem levitatingParticleSystem;
 
     [SerializeField]
-    public bool IsEnabled { get; set; }
+    public bool IsEnabled;
 
     private FiniteStateMachine<FanObject, StateBase<FanObject>> stateMachine;
 

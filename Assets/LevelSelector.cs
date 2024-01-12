@@ -7,15 +7,26 @@ public class LevelSelector : MonoBehaviour
 {
     public int level;
     public Text levelText;
-    // Start is called before the first frame update
+
+    private bool isLevelCompleted = false;
+
+    private Image image;
+
+    private Color initialColor;
+
+    private readonly Color disabledColor = new Color(116f / 255f, 116f / 255f, 116f / 255f);
     void Start()
     {
         levelText.text = level.ToString();
+        image = GetComponent<Image>();
+        initialColor = image.color;
+        isLevelCompleted = LevelService.IsLevelCompleted(level);
+        if (!isLevelCompleted) image.color = disabledColor;
     }
 
     public void OpenScene()
     {
-        SceneManager.LoadScene("Level " + level.ToString());
-        //SceneManager.LoadScene("Rban scene");
+        if (!isLevelCompleted) return;
+        SceneManager.LoadScene("Game Level " + level.ToString());
     }
 }

@@ -12,6 +12,8 @@ public class OakSeed : MonoBehaviour
 
     [SerializeField]
     internal float delay = 3f;
+    [SerializeField]
+    internal bool disableTimeoutDestroy = false;
 
     public OakSeed()
     {

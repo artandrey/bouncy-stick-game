@@ -14,14 +14,13 @@ public class OakSeedIdleState : StateBase<OakSeed>
 
     public override void OnUpdate(OakSeed context)
     {
+        base.OnUpdate(context);
+        if (context.disableTimeoutDestroy) return;
         if (timer < 0)
         {
             context.SetState(context.destroyState);
+            return;
         }
-        else
-        {
-            timer -= Time.deltaTime;
-        }
-        base.OnUpdate(context);
+        timer -= Time.deltaTime;
     }
 }

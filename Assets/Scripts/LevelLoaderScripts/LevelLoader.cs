@@ -22,13 +22,17 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private CameraScript cameraScript;
 
+    [SerializeField]
+    private int levelNumber = -1;
+
     private GameObject currentLevel;
-    private int levelIndex;
+    private int roomIndex;
 
     private bool isInitialLoad = true;
 
     private void Start()
     {
+        if (levelNumber == -1) throw new UnityException("Please provide level number to Level Number field");
         _loadScreenControl.onScreenOffEnded += TimeOn;
         _loadScreenControl.onSreenOnEnded += LoadNewLevel;
         player.OnPlayerDeath += Restart;
@@ -62,7 +66,7 @@ public class LevelLoader : MonoBehaviour
 
     private void LoadLevel(int index)
     {
-        levelIndex = index;
+        roomIndex = index;
         if (isInitialLoad)
         {
             LoadNewLevel();
@@ -80,14 +84,14 @@ public class LevelLoader : MonoBehaviour
             Destroy(currentLevel);
         }
 
-        RoomControl level = levels[levelIndex];
+        RoomControl level = levels[roomIndex];
         player.DispatchAlive();
         cameraScript.Reset();
         player.transform.position = level.StartPoint.position;
         player.transform.rotation = level.StartPoint.rotation;
         player.rigidbody.isKinematic = false;
         player.rigidbody.velocity = Vector2.zero;
-        currentLevel = Instantiate(levels[levelIndex].gameObject, levelPoint);
+        currentLevel = Instantiate(levels[roomIndex].gameObject, levelPoint);
         currentLevel.GetComponent<RoomControl>().OnRoomComplited += Next;
         if (!isInitialLoad)
         {
@@ -98,27 +102,28 @@ public class LevelLoader : MonoBehaviour
 
     public void Next()
     {
-        levelIndex += 1;
-        if (levelIndex >= levels.Count)
+        roomIndex += 1;
+        if (roomIndex >= levels.Count)
         {
             BackToMenu();
+            LevelService.SetLevelCompleted(levelNumber);
         }
-        LoadLevel(levelIndex);
+        LoadLevel(roomIndex);
     }
 
     public void Previous()
     {
-        levelIndex -= 1;
-        LoadLevel(levelIndex);
+        roomIndex -= 1;
+        LoadLevel(roomIndex);
     }
 
     public void Restart()
     {
-        LoadLevel(levelIndex);
+        LoadLevel(roomIndex);
     }
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("LevelChoose");
+        SceneManager.LoadScene("Menu");
     }
 }

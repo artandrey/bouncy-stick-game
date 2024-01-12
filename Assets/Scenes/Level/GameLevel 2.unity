@@ -5855,13 +5855,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScreenControl: {fileID: 34810201}
   levels:
-  - {fileID: 3561557459647118987, guid: 1afaaee12a7f19c4b88ca47338a1e4da, type: 3}
-  - {fileID: 3561557459647118987, guid: 9ddefda9ae43d42479b93acf2c0c5738, type: 3}
-  - {fileID: 3561557459647118987, guid: 86b7582dd624e0f4ba0448eba3fc248d, type: 3}
+  - {fileID: 1116928881632262772, guid: 19284f74e3c93b543a51bb74a2ced914, type: 3}
+  - {fileID: 6275116716330331988, guid: 8400522690cb61149b079347569478d5, type: 3}
+  - {fileID: 7666854416522058865, guid: 1d7c243925b2bb943b769eba97d8cfd0, type: 3}
+  - {fileID: 3561557459647118987, guid: 6c04d3b6e5d41f7438aec9318f987f82, type: 3}
   levelPoint: {fileID: 902505245}
   player: {fileID: 849649714}
   cameraScript: {fileID: 52667242}
-  levelNumber: 1
+  levelNumber: 2
 --- !u!1 &900954165
 GameObject:
   m_ObjectHideFlags: 0
