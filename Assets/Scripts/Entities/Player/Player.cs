@@ -33,7 +33,7 @@ public class Player : MonoBehaviour, IEntity
         stateMachine = new(this);
     }
 
-    void Start()
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
